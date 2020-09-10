@@ -69,7 +69,7 @@ def label_step():
 
     # update detection label
     ocr_text = json_data["features"][step]["properties"][key_ocr_text]
-    label_detection["text"] = "Detection:" + ocr_text # show OCR result
+    label_detection["text"] = "Detection:  " + ocr_text # show OCR result
     entry_truth.delete(0, tkinter.END) # clear input field
     if key_annotation_result in  json_data["features"][step]["properties"]:
         entry_truth.insert(0, json_data["features"][step]["properties"][key_annotation_result]) # insert existing annotation
