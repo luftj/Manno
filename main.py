@@ -99,6 +99,7 @@ if __name__ == "__main__":
 
     main_win = tkinter.Tk()
     main_win.title("Manno -- Annotating: %s" % args.image)
+    main_win.iconphoto(False, tkinter.PhotoImage(file='images/icon.png'))
     
     label_img = tkinter.Label(main_win)
     label_img.pack()
