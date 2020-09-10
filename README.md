@@ -4,7 +4,7 @@ this tool is for quickly annotating ground-truth labels for OCR on maps.
 
 ---
 
-![preview image of ui](images/preview.jpg)
+![preview image of ui](images/preview.JPG)
 
 ## Installation
 
