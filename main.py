@@ -75,6 +75,8 @@ def label_step():
         entry_truth.insert(0, json_data["features"][step]["properties"][key_annotation_result]) # insert existing annotation
     entry_truth.focus_set()
 
+    label_progress["text"] = "%d/%d" % (step, len(json_data["features"]))
+
     print(step,ocr_text,(l,t,r,b))
 
 if __name__ == "__main__":
@@ -111,6 +113,8 @@ if __name__ == "__main__":
     b1.pack()
     b2 = tkinter.Button(main_win, text="Save & Quit [ESCAPE]", command=finish)
     b2.pack()
+    label_progress = tkinter.Label(main_win,text="0/0")
+    label_progress.pack()
     main_win.bind("<Return>", label_step_cb)
     main_win.bind("<Escape>", finish_cb)
     label_step() # start with first image immediately
